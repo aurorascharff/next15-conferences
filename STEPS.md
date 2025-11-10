@@ -5,7 +5,6 @@
 - Fullscreen view
 - Aurora, web dev, norway, consultant at Crayon Consulting in oslo
 - Excited to speak here today, because i'll be teaching about modern react patterns: concurrent rendering, actions, and whats next.
-- Not a native dev, reach on the web! Here to update you on what’s happening there
 - Handling async operations in UI components can be tricky, we might encounter flickering pending states, inefficient state updates, unstable UX, and excess complexity.
 - React 18 already gave us concurrent rendering, which allowed us to improve the UX and responsiveness of our apps. Now, in 19, we have even more tools at our disposal, and new ways to combine them.
 - These are the concurrent features we are going to explore today. useTransition, useOptimistic, and useDeferredValue. They are going to become increasingly more important with View Transitions coming to React, which we will also check out at the end!
@@ -18,7 +17,7 @@
 ## Setup
 
 - I have some selects here for years, tags, speakers, and conferences.
-- (They're actually created with Ariakit using custom styling, where Ariakit handles the accessibility and interactions, like keyboard nav, click outside, focus, and viewport aware placement.)
+- They're actually created with Ariakit using custom styling, where Ariakit handles the accessibility and interactions, like keyboard nav, click outside, focus, and viewport aware placement.
 - Try selects. Selects feel stuck, i suppose async. We're having some weird loading states that flicker and are not in sync on multiple selection, losing the last update. We have some UX problems here. Let's get to the code.
 
 ## Introduce starting point AsyncSelect
@@ -88,7 +87,7 @@
 
 ## View Transitions
 
-- DOCS: View transitions are coming to react a a component! Currently available in canary channel, and in nextjs. And the reason it fits so well into this talk is because we need to know all these concurrent features to make the most out of view transitions.
+- DOCS: View transitions are coming to react a a component! Currently installable in canary channel, and available in nextjs. And the reason it fits so well into this talk is because we need to know all these concurrent features to make the most out of view transitions.
 - Because view transitions are triggered when elements update a transition, a suspense, or a deferred update.
 - For example, when a transition finishes, react will automatically animate the result of the transition to the new UI.
 
@@ -142,4 +141,4 @@
 
 ## Conclusion
 
-That's it for this talk, the code is pinned on my GitHub and accessible through the QR code here, and follow me on my socials or reach out to me in the future! Thanks for having me React Universe, and enjoy the party later!
+That's it for this talk, the code is pinned on my GitHub and accessible through the QR code here, and follow me on my socials or reach out to me in the future! Thanks for having, see you again!
