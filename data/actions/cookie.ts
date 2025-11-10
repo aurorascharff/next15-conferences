@@ -29,7 +29,7 @@ export async function someRandomServerFunction(conference: SelectItem[], year: s
     yearValue = year as string;
   }
 
-  const shouldEasterEgg = yearValue === '2025' && conferenceValue === 'React Universe Conf';
+  const shouldEasterEgg = yearValue === '2025' && conferenceValue === 'Framsia';
 
   if (!shouldEasterEgg) {
     return;
