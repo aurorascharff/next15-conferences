@@ -2,8 +2,7 @@
 
 import { X } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
-// eslint-disable-next-line autofix/no-unused-vars
-import React, { Suspense, useState, useTransition, unstable_ViewTransition as ViewTransition } from 'react';
+import React, { Suspense, useState, useTransition } from 'react';
 import type { TalksResult } from '@/types/talk';
 import TalksGrid, { TalksGridSkeleton } from './TalksGrid';
 import Button from './ui/Button';

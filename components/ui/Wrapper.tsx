@@ -1,6 +1,6 @@
 import { cookies } from 'next/headers';
 import Image from 'next/image';
-import React, { unstable_ViewTransition as ViewTransition } from 'react';
+import React, { ViewTransition } from 'react';
 import { resetEasterEgg, hideIntro } from '@/data/actions/cookie';
 import Button from './Button';
 import type { ReactNode } from 'react';

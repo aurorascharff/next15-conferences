@@ -1,8 +1,7 @@
 'use client';
 
 import { useSearchParams } from 'next/navigation';
-// eslint-disable-next-line autofix/no-unused-vars
-import React, { use, useRef, useState, unstable_ViewTransition as ViewTransition } from 'react';
+import React, { use, useRef, useState } from 'react';
 import { getTalksAction } from '@/data/actions/talk';
 import { useInfiniteScroll } from '@/hooks/useInfiniteScroll';
 import type { TalksResult } from '@/types/talk';
