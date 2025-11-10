@@ -54,7 +54,7 @@ export default function Filters({ filterOptions, filters }: Props) {
           options={filterOptions.years}
         />
         <RouterSelect
-          // This executes at the end of the transition, however theme color uses a ref so it executes immediately
+          // The toast executes at the end of the transition, however theme color uses a ref so it executes immediately
           selectAction={items => {
             updateThemeColor(items, documentRef);
             if (items.length > 0) {
