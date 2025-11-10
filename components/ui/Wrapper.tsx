@@ -67,7 +67,7 @@ export default async function Wrapper({ children }: Props) {
             Thank you
             <br />
             <span className="from-primary to-primary-dark dark:from-primary-dark dark:to-primary bg-gradient-to-r bg-clip-text text-transparent">
-              React Universe Conf 2025
+              Framsia Meetup 2025
             </span>
           </div>
           <div className="my-4 flex flex-col items-center">
@@ -79,13 +79,13 @@ export default async function Wrapper({ children }: Props) {
               href="https://github.com/aurorascharff/next15-conferences"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary-dark dark:text-primary-light dark:hover:text-primary mt-1 text-sm underline transition-colors"
+              className="text-primary hover:text-primary-dark dark:text-primary-light dark:hover:text-primary mt-1 text-lg underline transition-colors"
             >
               github.com/aurorascharff/next15-conferences
             </a>
           </div>
           <div className="text-accent-dark dark:text-accent-light mt-2 text-lg font-medium">
-            <span className="text-accent dark:text-accent-light">Enjoy the party 🎉</span>
+            <span className="text-accent dark:text-accent-light">See you next time! 👋</span>
           </div>
           <form action={resetEasterEgg} className="mt-6">
             <Button>Return</Button>
