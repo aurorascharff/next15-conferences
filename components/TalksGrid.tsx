@@ -61,7 +61,7 @@ export default function TalksGrid({ talksPromise, search }: Props) {
     />
   ) : (
     <>
-      <div suppressHydrationWarning className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
         {filteredTalks.map(talk => {
           return (
             <TalkCard
@@ -82,7 +82,7 @@ export default function TalksGrid({ talksPromise, search }: Props) {
           <p className="text-sm">Try adjusting your filters or search terms</p>
         </div>
       )}
-      <div suppressHydrationWarning className="flex h-5 justify-center pt-5" ref={ref}>
+      <div className="flex h-5 justify-center pt-5" ref={ref}>
         {loading && <Spinner />}
       </div>
     </>
