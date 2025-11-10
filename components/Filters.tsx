@@ -74,7 +74,7 @@ export default function Filters({ filterOptions, filters }: Props) {
           selectAction={items => {
             if (
               items.some(item => {
-                return item.value === 'Anisha Malde';
+                return item.value === 'Kristoffer Nordström';
               })
             ) {
               setIsExploding(true);
