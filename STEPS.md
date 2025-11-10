@@ -72,7 +72,7 @@
 - We should await this so the parent can pass either sync or async here for max flexibility.
 - Notice the naming. We need to mark our deferred behavior so the parent knows this is happening in a transition. This is a convention with actions, to use the action suffix.
 - Think about the new react 19 form. We have either onSubmit or action, depending on our needs. And now we are doing it with our own components!
-- We could even extract the whole routing logic out to make this a reusable async select design component, which is a pattern that the React team is working on getting implemented by design systems, but for this demo, lets keep it here.
+- We could even extract the whole routing logic out to make this a reusable async select design component, which is a pattern that the React team is working on getting implemented by design systems. That means we don't have to code this ourselves. But for this demo, lets keep it here. Regardless, we need to know what it means to have an action prop.
 
 ## Filters use the action prop
 
