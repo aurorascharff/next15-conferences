@@ -49,7 +49,6 @@ export default async function Wrapper({ children }: Props) {
           </div>
           <div className="mb-6 text-center">
             <div className="text-accent-dark dark:text-accent-light text-lg font-medium">@aurorascharff</div>
-            <div className="text-accent dark:text-accent-light mt-1 text-sm">Aurora Scharff</div>
           </div>
           <form action={hideIntro} className="mt-4">
             <Button type="submit" className="px-8 py-3 text-lg">
