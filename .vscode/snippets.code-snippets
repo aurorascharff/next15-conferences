@@ -10,11 +10,9 @@
         "scope": "typescriptreact",
         "prefix": "successToast",
         "body": [
-            "startTransition(() => {",
-            "  if (items.length > 0) {",
-            "    toast.success(`Applied \\${items.length} tag filter\\${items.length > 1 ? 's' : ''}`);",
-            "  }",
-            "});"
+            "if (items.length > 0) {",
+            "  toast.success(`Applied \\${items.length} tag filter\\${items.length > 1 ? 's' : ''}`);",
+            "}"
         ]
     },"createQueryStringValue": {
         "scope": "typescriptreact",
