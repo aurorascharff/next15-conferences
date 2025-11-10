@@ -6,13 +6,6 @@
             "selectAction?: (items: SelectItem[]) => void | Promise<void>;"
         ],
     },
-    "importViewTransition": {
-        "scope": "typescriptreact",
-        "prefix": "importViewTransition",
-        "body": [
-            "import { unstable_ViewTransition as ViewTransition } from 'react';"
-        ]
-    },
     "successToast": {
         "scope": "typescriptreact",
         "prefix": "successToast",
@@ -44,7 +37,7 @@
         "body": [
             "if (",
             "  items.some(item => {",
-            "    return item.value === 'Anisha Malde';",
+            "    return item.value === 'Kristoffer Nordström';",
             "  })",
             ") {",
             "  setIsExploding(true);",

@@ -448,7 +448,7 @@ const TALKS = [
     year: 2024,
   },
   {
-    conference: 'React Universe Conf',
+    conference: 'Framsia',
     description:
       'Learn how modern React patterns, Actions, and View Transitions enable smooth, reliable async UI in Next.js App Router.',
     duration: 20,
@@ -513,6 +513,28 @@ const TALKS = [
     speaker: 'Marc Rousavy',
     tag: 'React Native',
     title: 'To be announced',
+    year: 2025,
+  },
+  {
+    conference: 'Framsia',
+    description:
+      // eslint-disable-next-line quotes
+      "Building a Design System is easy, maintaining and making it grow organically is much more difficult. This requires planning and collaboration, or does it? Can't we just cut out the collaboration part and make things more efficient. Join me on a story about planning, categorising and sorting and about handling human beings and their peculiarities. Maybe your Design System will end up on The Design Systems Graveyard. What does all this have in common with The Gentle Art of Swedish Death Cleaning?",
+    duration: 15,
+    speaker: 'Kristoffer Nordström',
+    tag: 'Design Systems',
+    title: 'The Design Systems Graveyard',
+    year: 2025,
+  },
+  {
+    conference: 'Framsia',
+    description:
+      // eslint-disable-next-line quotes
+      "Modern web standards are giving frontend developers powerful new tools to work with. With the Popover API and the dialog element, it's now possible to build modals, menus, and other interactive components directly in HTML—without relying on third-party libraries or complex workarounds. In this talk, Eric will demonstrate how these features can be applied in real projects, explore the scenarios where they work best, and point out the common pitfalls you'll want to avoid. We'll also take a look at some of the latest innovations in CSS, and see how they combine with these new HTML capabilities to unlock cleaner, more elegant, and more flexible user interfaces.",
+    duration: 15,
+    speaker: 'Eric Veliyulin',
+    tag: 'Web Platform',
+    title: 'The New Frontend Toolkit: Popover API, Dialog, and Next-Gen CSS',
     year: 2025,
   },
   {

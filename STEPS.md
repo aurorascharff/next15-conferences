@@ -12,7 +12,7 @@
 - Who here has ever used useTransition?
 - Who here has ever used useOptimistic?
 - Who here has ever used useDeferredValue?
-- Who has tried the experimental release of View Transitions in React?
+- Who has tried the canary release of View Transitions in React?
 - Perfect! Let's begin, and dive deeper into these hooks. Click button.
 
 ## Setup
@@ -72,7 +72,7 @@
 - We should await this so the parent can pass either sync or async here for max flexibility.
 - Notice the naming. We need to mark our deferred behavior so the parent knows this is happening in a transition. This is a convention with actions, to use the action suffix.
 - Think about the new react 19 form. We have either onSubmit or action, depending on our needs. And now we are doing it with our own components!
-- We could even extract the whole routing logic out to make this a reusable async select design component, but for this demo, lets keep it here.
+- We could even extract the whole routing logic out to make this a reusable async select design component, which is a pattern that the React team is working on getting implemented by design systems, but for this demo, lets keep it here.
 
 ## Filters use the action prop
 
@@ -88,7 +88,7 @@
 
 ## View Transitions
 
-- DOCS: View transitions are coming to react a a component! I don't have insider info but I'm pretty sure we'll see a lot of this at React Conf next month. And the reason it fits so well into this talk is because we need to know all these concurrent features to make the most out of view transitions.
+- DOCS: View transitions are coming to react a a component! Currently available in canary channel, and in nextjs. And the reason it fits so well into this talk is because we need to know all these concurrent features to make the most out of view transitions.
 - Because view transitions are triggered when elements update a transition, a suspense, or a deferred update.
 - For example, when a transition finishes, react will automatically animate the result of the transition to the new UI.
 

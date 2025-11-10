@@ -2,13 +2,7 @@
 
 import { X } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
-import React, {
-  Suspense,
-  useDeferredValue,
-  useState,
-  useTransition,
-  unstable_ViewTransition as ViewTransition,
-} from 'react';
+import React, { Suspense, useDeferredValue, useState, useTransition, ViewTransition } from 'react';
 import type { TalksResult } from '@/types/talk';
 import TalksGrid, { TalksGridSkeleton } from './TalksGrid';
 import Button from './ui/Button';
