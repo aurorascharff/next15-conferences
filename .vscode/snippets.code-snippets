@@ -75,5 +75,12 @@
             "const router = useRouter();",
             "const searchParams = useSearchParams();"
         ]
-    }
+    },
+        "importViewTransition": {
+            "scope": "typescriptreact",
+            "prefix": "importViewTransition",
+            "body": [
+                "import { ViewTransition } from 'react';"
+            ]
+        },
 }
