@@ -16,10 +16,7 @@ export async function getTalks(
 
   const validSpeakers = processFilterValues(filters.speaker);
   if (validSpeakers.length > 0) {
-    where.speaker =
-      validSpeakers.length === 1
-        ? { contains: validSpeakers[0], mode: 'insensitive' }
-        : { in: validSpeakers, mode: 'insensitive' };
+    where.speaker = validSpeakers.length === 1 ? { contains: validSpeakers[0] } : { in: validSpeakers };
   }
 
   const validYears = processYearValues(filters.year);
@@ -29,16 +26,12 @@ export async function getTalks(
 
   const validTags = processFilterValues(filters.tag);
   if (validTags.length > 0) {
-    where.tag =
-      validTags.length === 1 ? { equals: validTags[0], mode: 'insensitive' } : { in: validTags, mode: 'insensitive' };
+    where.tag = validTags.length === 1 ? { equals: validTags[0] } : { in: validTags };
   }
 
   const validConferences = processFilterValues(filters.conference);
   if (validConferences.length > 0) {
-    where.conference =
-      validConferences.length === 1
-        ? { contains: validConferences[0], mode: 'insensitive' }
-        : { in: validConferences, mode: 'insensitive' };
+    where.conference = validConferences.length === 1 ? { contains: validConferences[0] } : { in: validConferences };
   }
 
   const [talks, total] = await Promise.all([
