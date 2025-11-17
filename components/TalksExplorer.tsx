@@ -27,8 +27,8 @@ export default function TalksExplorer({ talksPromise }: Props) {
         }}
       />
       <ActiveFilters />
-      <Suspense key={searchParams.toString()} fallback={<TalksGridSkeleton />}>
-        <TalksGrid talksPromise={talksPromise} search={search} />
+      <Suspense fallback={<TalksGridSkeleton />}>
+        <TalksGrid key={searchParams.toString()} talksPromise={talksPromise} search={search} />
       </Suspense>
     </>
   );
