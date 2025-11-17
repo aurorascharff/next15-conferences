@@ -48,33 +48,30 @@ export default function TalksGrid({ talksPromise, search }: Props) {
   });
 
   return expandedTalkId ? (
-    <ViewTransition enter="slide-in" name={`talk-${expandedTalkId}`}>
-      <TalkDetails
-        talk={
-          filteredTalks.find(talk => {
-            return talk.id === expandedTalkId;
-          }) || null
-        }
-        closeAction={() => {
-          setExpandedTalkId(null);
-          scrollToPosition(scrollPositionRef.current);
-        }}
-      />
-    </ViewTransition>
+    <TalkDetails
+      talk={
+        filteredTalks.find(talk => {
+          return talk.id === expandedTalkId;
+        }) || null
+      }
+      onClose={() => {
+        setExpandedTalkId(null);
+        scrollToPosition(scrollPositionRef.current);
+      }}
+    />
   ) : (
     <>
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
         {filteredTalks.map(talk => {
           return (
-            <ViewTransition key={`talk-${talk.id}`} name={`talk-${talk.id}`}>
-              <TalkCard
-                talk={talk}
-                selectAction={() => {
-                  scrollPositionRef.current = window.scrollY;
-                  setExpandedTalkId(talk.id);
-                }}
-              />
-            </ViewTransition>
+            <TalkCard
+              key={`talk-${talk.id}`}
+              talk={talk}
+              onSelect={() => {
+                scrollPositionRef.current = window.scrollY;
+                setExpandedTalkId(talk.id);
+              }}
+            />
           );
         })}
       </div>

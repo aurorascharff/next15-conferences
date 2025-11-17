@@ -14,8 +14,6 @@ type Props = {
 
 export default function TalksExplorer({ talksPromise }: Props) {
   const [search, setSearch] = useState('');
-  const deferredSearch = useDeferredValue(search);
-  const isSearching = search !== deferredSearch;
   const searchParams = useSearchParams();
 
   return (
@@ -23,23 +21,14 @@ export default function TalksExplorer({ talksPromise }: Props) {
       <SearchField
         value={search}
         name="search"
-        isSearching={isSearching}
         placeholder="Search by title, description, speaker, conference, or tag..."
         onChange={e => {
           setSearch(e.currentTarget.value);
         }}
       />
       <ActiveFilters />
-      <Suspense
-        fallback={
-          <ViewTransition exit="slide-down">
-            <TalksGridSkeleton />
-          </ViewTransition>
-        }
-      >
-        <ViewTransition key={searchParams.toString()} enter="slide-up" exit="slide-down" default="none">
-          <TalksGrid talksPromise={talksPromise} search={deferredSearch} />
-        </ViewTransition>
+      <Suspense key={searchParams.toString()} fallback={<TalksGridSkeleton />}>
+        <TalksGrid talksPromise={talksPromise} search={search} />
       </Suspense>
     </>
   );
