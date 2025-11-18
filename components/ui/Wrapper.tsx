@@ -4,6 +4,7 @@ import React, { ViewTransition } from 'react';
 import { resetEasterEgg, hideIntro } from '@/data/actions/cookie';
 import Button from './Button';
 import type { ReactNode } from 'react';
+import { View } from 'lucide-react';
 
 interface Props {
   children?: ReactNode;
@@ -28,27 +29,17 @@ export default async function Wrapper({ children }: Props) {
         <WrapperCard>
           <span className="text-primary dark:text-primary mb-6 animate-bounce text-6xl select-none">🚀</span>
           <div className="text-primary-dark dark:text-primary mb-6 text-center text-2xl font-extrabold md:text-3xl lg:text-5xl">
-            Modern React Patterns
+            Async React
             <br />
-            <span className="from-primary to-primary-dark dark:from-primary-dark dark:to-primary bg-gradient-to-r bg-clip-text text-xl text-transparent md:text-2xl lg:text-4xl">
-              Concurrent Rendering, Actions &amp; What&apos;s Next
-            </span>
+            {'<ViewTransition />'} Demo
           </div>
           <div className="mb-8 text-center">
-            <h3 className="text-accent-dark dark:text-accent-light mb-4 text-xl font-bold">
-              🧭 What We&apos;ll Explore Today
-            </h3>
+            <h3 className="text-accent-dark dark:text-accent-light mb-4 text-xl font-bold">Activated by:</h3>
             <ul className="text-accent-dark dark:text-accent-light inline-flex flex-wrap justify-center gap-2 text-lg sm:gap-4">
               <FeatureItem>useTransition</FeatureItem>
-              <FeatureItem>useOptimistic</FeatureItem>
+              <FeatureItem>Suspense</FeatureItem>
               <FeatureItem>useDeferredValue</FeatureItem>
-              <FeatureItem>
-                {'<'}ViewTransition{'>'}
-              </FeatureItem>
             </ul>
-          </div>
-          <div className="mb-6 text-center">
-            <div className="text-accent-dark dark:text-accent-light text-lg font-medium">@aurorascharff</div>
           </div>
           <form action={hideIntro} className="mt-4">
             <Button type="submit" className="px-8 py-3 text-lg">
