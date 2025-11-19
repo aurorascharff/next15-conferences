@@ -29,9 +29,9 @@ export default async function Wrapper({ children }: Props) {
         <WrapperCard>
           <span className="text-primary dark:text-primary mb-6 animate-bounce text-6xl select-none">🚀</span>
           <div className="text-primary-dark dark:text-primary mb-6 text-center text-2xl font-extrabold md:text-3xl lg:text-5xl">
-            Async React
+            {'<ViewTransition />'}
             <br />
-            {'<ViewTransition />'} Demo
+            <span className="text-accent-dark text-center text-lg font-semibold">with Async React</span>
           </div>
           <div className="mb-8 text-center">
             <h3 className="text-accent-dark dark:text-accent-light mb-4 text-xl font-bold">Activated by:</h3>
