@@ -36,7 +36,7 @@ export default async function Wrapper({ children }: Props) {
           <div className="mb-8 text-center">
             <h3 className="text-accent-dark dark:text-accent-light mb-4 text-xl font-bold">Activated by:</h3>
             <ul className="text-accent-dark dark:text-accent-light inline-flex flex-wrap justify-center gap-2 text-lg sm:gap-4">
-              <FeatureItem>useTransition</FeatureItem>
+              <FeatureItem>startTransition</FeatureItem>
               <FeatureItem>Suspense</FeatureItem>
               <FeatureItem>useDeferredValue</FeatureItem>
             </ul>
