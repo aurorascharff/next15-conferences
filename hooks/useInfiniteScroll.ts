@@ -39,6 +39,7 @@ export function useInfiniteScroll<T>(
   };
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setData(initialData);
     setPageNumber(1);
   }, [initialData]);
