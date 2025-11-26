@@ -28,12 +28,11 @@ export default function TalksGrid({ talksPromise, search }: Props) {
   const {
     data: talks,
     ref,
-    pageNumber,
     loading,
   } = useInfiniteScroll<Talk>(
     initialTalks,
-    async () => {
-      const talksResult = await getTalksAction(activeFilters, pageNumber + 1);
+    async pageNumber => {
+      const talksResult = await getTalksAction(activeFilters, pageNumber);
       return talksResult.talks;
     },
     totalPages,
