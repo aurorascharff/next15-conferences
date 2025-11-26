@@ -75,12 +75,12 @@ export default async function Wrapper({ children }: Props) {
             </div>
             <div className="text-accent-dark dark:text-accent-light text-lg font-medium">@aurorascharff</div>
             <a
-              href="https://github.com/aurorascharff/next15-conferences"
+              href="https://github.com/aurorascharff/next16-conferences"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-primary-dark dark:text-primary-light dark:hover:text-primary mt-1 text-lg underline transition-colors"
             >
-              github.com/aurorascharff/next15-conferences
+              github.com/aurorascharff/next16-conferences
             </a>
           </div>
           <div className="text-accent-dark dark:text-accent-light mt-2 text-lg font-medium">
