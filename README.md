@@ -1,4 +1,4 @@
-# Next.js 15 Conference Explorer
+# Next.js 16 Conference Explorer
 
 An interactive conference explorer app built with Next.js 15, React 19 features, View Transitions, Ariakit, Tailwind CSS v4 and Prisma.
 
