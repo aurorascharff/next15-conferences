@@ -1,7 +1,11 @@
 import { startTransition, useEffect, useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-export function useInfiniteScroll<T>(initialData: T[], loadMoreAction: () => Promise<T[]>, numberOfPages: number) {
+export function useInfiniteScroll<T>(
+  initialData: T[],
+  loadMoreAction: (pageNumber: number) => Promise<T[]>,
+  numberOfPages: number,
+) {
   const [pageNumber, setPageNumber] = useState(1);
   const [data, setData] = useState<T[]>(initialData);
   const [loading, setLoading] = useState(false);
@@ -20,7 +24,7 @@ export function useInfiniteScroll<T>(initialData: T[], loadMoreAction: () => Pro
     setLoading(true);
     startTransition(async () => {
       const scrollPosition = window.scrollY;
-      const newData: T[] = await loadMoreAction();
+      const newData: T[] = await loadMoreAction(pageNumber + 1);
       setData(prevData => {
         return [...prevData, ...newData];
       });
