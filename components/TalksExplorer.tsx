@@ -2,7 +2,7 @@
 
 import { X } from 'lucide-react';
 import { useRouter, useSearchParams } from 'next/navigation';
-// eslint-disable-next-line autofix/no-unused-vars
+// eslint-disable-next-line autofix/no-unused-vars, @typescript-eslint/no-unused-vars
 import React, { Suspense, useState, useTransition, ViewTransition } from 'react';
 import type { TalksResult } from '@/types/talk';
 import TalksGrid, { TalksGridSkeleton } from './TalksGrid';
