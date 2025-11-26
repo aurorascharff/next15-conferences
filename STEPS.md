@@ -93,7 +93,7 @@
 
 ## Add View Transitions
 
-- Layout.tsx. Let's start simple and wrap the app with a app viewtrans component to enable the default crossfade. NextJS is following the suspense-enabled router pattern from the React team, so every route navigation is wrapped in a transition. So ViewTransitions works out of the box with our filters, it adds this cross fade.
+- Layout.tsx. Let's start simple and wrap the app with a app viewtrans component to enable the default crossfade. Suspense is already animating. Also the filters! NextJS is following the suspense-enabled router pattern from the React team, so every route navigation is wrapped in a transition. So ViewTransitions works out of the box with our filters, it adds this cross fade.
 - But for many of these interactions we don't want that. So let's remove it from the whole page, and add it for specific parts we want to animate lower in the tree.
 - Let's see the TalksExplorer. The Talks client component has a search, is receiving the talks promise. Suspending with a fallback.
 
@@ -120,7 +120,7 @@
 ### Search interaction
 
 - Finally, how about the search interaction. I already a ViewTransition on the cards, but theyre not animating. Thats' because there is no transition or deferred update on this search. Let's solve it with useDeferredValue.
-- Now, you may know, from react 18, you could use it to avoid blocking input responsiveness by deferring the value until react is able to render it, like in our search, (or in a slider demo like we saw from the Lynx team yesterday) It can also be used with async data fetching to avoid jarring UI updates in something like a combobox.
+- Now, you may know, from react 18, you could use it to avoid blocking input responsiveness by deferring the value until react is able to render it, like in our search. It can also be used with async data fetching to avoid jarring UI updates in something like a combobox.
 - Let's use useDeferredValue here to trigger a viewtransition! DeferredValue will lag begind. Add isStale indicator for the spinner!
 - React can automatically animate the result of the deferred update to the new UI.
 - (Use chrome devtools to slow down the animations! Animation drawer. Showcase.)
@@ -132,7 +132,7 @@
 - Let's see all of this in action! Full screen.
 - Initial load suspense animation out and list in.
 - We can click the items and have this named view transition connecting the two items. I also have clickable badges by the way, they also animate now on router push!
-- And we can clear the filters with a smooth transition in and out.
+- And we can clear the filters with a smooth transition in and out, the slide-down on the list, and the cards moving.
 - We have the filterable list with the filtering animation here, triggered by useDeferredValue. Unfilter.
 - We can execute the custom select components with a various set of side effects based on the transition behavior. Year. Animates as well because its a router push. Notice the smooth UX on the select and the loading bar.
 - Tag: angular, solid, react, vue. Clear.

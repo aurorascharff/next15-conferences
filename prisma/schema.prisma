@@ -6,9 +6,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  // url      = "file:./dev.db"
-  url      = env("DATABASE_URL") // Change to "file:./dev.db" for local development with sqlite
+  provider = "sqlite"
+  url      = "file:./dev.db"
+  // url      = env("DATABASE_URL") // Change to "file:./dev.db" for local development with sqlite
 }
 
 model Talk {
